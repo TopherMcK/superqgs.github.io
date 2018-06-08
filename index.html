@@ -1,76 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>QGSOFTWARE</title>
         <style>
             * {
-                background-color: black;
-                color: white;
-            }
-            
-            #top {
                 text-align: center;
+                font-size: 70px;
             }
             
-            img {
-                width: 15%;
+            #advice {
+                font-size: 40px;
             }
-            
-            #side {
-                border-right: 1px solid white;
-                text-align: center;
-                float: left;
-                width: 15%;
-                height: 81vh;
-                font-size: 1vw
-            }
-            
-            #center {
-                text-align: center;
-                font-size: 1vw;
-                width: 85%;
-            }
-            
-            #qgs {
-                width: 40%;
-            }
-            
         </style>
     </head>
     <body>
-        
-        <div id="all">    
+        <h1>BonkBot2000</h1>
+        <p>Generate Life Advice</p>
+        <button onclick="rNG()">I HAVE A LIFE CRISIS</button>
+        <p id="advice">...</p>
+        <script>
+            function rNG() {
+                //reaction
+                var reactArray = ["oh no, ", "It's healthy to rant, ", "That's horrible! ", "It's going to be okay, ", "That's relatebake, ", "okay so, ", "I see, ", "ah, ", "so what you need to do is ", "I understand what you mean, "]
+                
+                
+                var reaction = reactArray[Math.round(Math.random()*(reactArray.length-1))];
+                
+                //advice
+                var adviceArray = ["stay positive! ", "focus on the things you CAN control about the situation, ", "don't be afraid to make a mistake. ", "think about WHY you're feeling/thinking/acting this way and do you have a good reason? ", "if you're making a tough choice, flip a coin. You'll realize what you want it to be in the air. ", "don't make excuses for yourself, remember your mistakes and get better from them. ", "bonk. ", "focus and improve the relationships you care about. ", "believe in yourself! sometimes a bit of confidence is all you need to suceed. ", "go for it - regret is a feeling that you do not want to have. "]
+                
+                var advice = adviceArray[Math.round(Math.random()*(adviceArray.length-1))];
+                
+                //encouragement
+                var enArray = ["It will all turn out fine! ", "You can get through this! ", "It's going to be okay. ", "Don't worry.", "I believe in you!", "You can do it!", "Anything is possiibe!", "You'll do great.", "You can do anything you put your mind to!", "Have confidence!"]
+                
+                var encouragement = enArray[Math.round(Math.random()*(enArray.length-1))];
+                
+                //result
+                var result = reaction + advice + encouragement;
+                document.getElementById("advice").innerHTML = result;
+            }
             
-            <div id="top">
-                <img src="textures/logo.dib"/>
-                <hr>
-            </div>
-
-            <div id="side">
-                <img id="qgs" src="textures/QGS2.jpg">
-                <hr>
-                <a href="index.html"><h1>INDEX</h1></a>
-                <br>
-                <a href="games.html"><h1>GAMES</h1></a>
-                <br>
-                <a href="engines.html"><h1>ENGINES</h1></a>
-                <br>
-                <a href="about.html"><h1>ABOUT</h1></a>
-            </div>
-            
-            <div id="center">
-                <h1>INDEX</h1>
-                <p>Welcome to QuantumGlitchSoftware!</p>
-                <a href="games.html">GAMES</a>
-                <br>
-                <br>
-                <a href="engines.html">ENGINES</a>
-                <br>
-                <br>
-                <a href="about.html">ABOUT</a>
-            </div>
+            //reaction + advice + encouragement
         
-        </div>
-    
+        </script>
     </body>
 </html>
