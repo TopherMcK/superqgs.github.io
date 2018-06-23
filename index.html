@@ -1,47 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            * {
-                text-align: center;
-                font-size: 70px;
-            }
-            
-            #advice {
-                font-size: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>BonkBot2000</h1>
-        <p>Generate Life Advice</p>
-        <button onclick="rNG()">I HAVE A LIFE CRISIS</button>
-        <p id="advice">...</p>
-        <script>
-            function rNG() {
-                //reaction
-                var reactArray = ["oh no, ", "It's healthy to rant, ", "That's horrible! ", "It's going to be okay, ", "That's relatebake, ", "okay so, ", "I see, ", "ah, ", "so what you need to do is ", "I understand what you mean, "]
-                
-                
-                var reaction = reactArray[Math.round(Math.random()*(reactArray.length-1))];
-                
-                //advice
-                var adviceArray = ["stay positive! ", "focus on the things you CAN control about the situation, ", "don't be afraid to make a mistake. ", "think about WHY you're feeling/thinking/acting this way and do you have a good reason? ", "if you're making a tough choice, flip a coin. You'll realize what you want it to be in the air. ", "don't make excuses for yourself, remember your mistakes and get better from them. ", "bonk. ", "focus and improve the relationships you care about. ", "believe in yourself! sometimes a bit of confidence is all you need to suceed. ", "go for it - regret is a feeling that you do not want to have. "]
-                
-                var advice = adviceArray[Math.round(Math.random()*(adviceArray.length-1))];
-                
-                //encouragement
-                var enArray = ["It will all turn out fine! ", "You can get through this! ", "It's going to be okay. ", "Don't worry.", "I believe in you!", "You can do it!", "Anything is possiibe!", "You'll do great.", "You can do anything you put your mind to!", "Have confidence!"]
-                
-                var encouragement = enArray[Math.round(Math.random()*(enArray.length-1))];
-                
-                //result
-                var result = reaction + advice + encouragement;
-                document.getElementById("advice").innerHTML = result;
-            }
-            
-            //reaction + advice + encouragement
-        
-        </script>
-    </body>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <title>Pfautsch Tavern and Residence</title>
+    <style>
+        img {
+            width: 15%;
+        }
+
+        #side {
+            border-right: 1px solid white;
+            text-align: center;
+            float: left;
+            width: 15%;
+            height: 81vh;
+            font-size: 1vw;
+            background-color: firebrick;
+            display: inline-block;
+        }
+
+        #center {
+            text-align: center;
+            font-size: 1vw;
+            width: 85%;
+            display: inline;
+        }
+
+        #side1 {
+            background-color: firebrick;
+            color: white;
+        }
+
+        .twitter-timeline {}
+
+    </style>
+</head>
+
+<body>
+    <nav id="topNav" class="navbar sticky-top">
+        <p id="navBrand" class="navbar-brand mx-auto" href="#">Pfautsch Tavern and Residence</p>
+    </nav>
+
+    <div id="mainWrapper" class="container-fluid">
+        <div style="padding-left: 0" class="row">
+            <div class="col-3">
+            <nav id="sideNavMenu" class="nav flex-column">
+                <a class="nav-link active" href="index.html" id="side1">
+                    <h1 id="side1">HOME</h1>
+                </a>
+                <a class="nav-link" href="contact.html" id="side1">
+                    <h1 id="side1">CONTACT<br>INFO</h1>
+                </a>
+                <a class="nav-link" href="tweets.html" id="side1">
+                    <h1 id="side1">TWEETS</h1>
+                </a>
+                <a class="nav-link" href="history.html" id="side1">
+                    <h1 id="side1">HISTORY</h1>
+                </a>
+            </nav>
+                </div>
+
+            <div id="contentContainer" class="col-9">
+                <a class="twitter-timeline" data-width="84%" data-height="81vh" data-theme="dark" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
 </html>

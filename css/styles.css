@@ -1,0 +1,20 @@
+* {
+    background-color: lightgray;
+}
+
+#topNav {
+    background-color: lightseagreen;
+}
+
+#navBrand {
+    color: #000;
+    background-color: lightseagreen;
+}
+
+#mainWrapper {
+    padding-left: 0;
+}
+
+#contentContainer {
+    padding-top: 20px;
+}
